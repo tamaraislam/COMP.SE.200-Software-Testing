@@ -5,10 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "mocha",
+    "setTestReport": "mocha --reporter mochawesome || true"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1"
+  },
   "devDependencies": {}
 }
