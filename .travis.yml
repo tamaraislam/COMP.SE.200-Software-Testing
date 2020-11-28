@@ -26,6 +26,7 @@ deploy:
   keep-history: true
   on:
     branch: master
-    
+    all_branches: true
+
 after_script:
   - coveralls
