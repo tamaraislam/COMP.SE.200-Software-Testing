@@ -115,3 +115,22 @@ describe("capitalize.js tests", function() {
     });
   });
 });
+
+/****** 5. castArray.js tests *****/
+describe("castArray.js tests", function() {
+  describe("Should Converts values to arrays", function() {
+
+    it("should return [1] when test data is 1", function() {
+      expect("1").to.eql([1]);
+    });
+
+    it("should return [{ 'a': 1 }] when test data is { 'a': 1 }", function() {
+      expect("{ 'a': 1 }").to.eql([{ 'a': 1 }]);
+    });
+
+    it("should return ['abc'] when test data is 'abc'", function() {
+      expect("'abc'").to.eql(['abc']);
+    });
+  });
+});
+
