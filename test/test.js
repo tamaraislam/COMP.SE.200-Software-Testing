@@ -9,6 +9,7 @@ const assert = require('chai').assert;
 import add from "../src/add.js";
 import at from "../src/at.js";
 import camelCase from "../src/camelCase.js";
+import capitalize from "../src/capitalize.js";
 
 /******** 
  * 
@@ -110,7 +111,7 @@ describe("capitalize.js tests", function() {
      
     it("should return null", function() {
       assert.isNull(capitalize(" "), expectedResult);
-      
+
     });
   });
 });
