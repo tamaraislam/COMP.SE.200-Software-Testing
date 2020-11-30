@@ -5,17 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "setTestReport": "mocha --reporter mochawesome || true"
+    "test": "c8 --exclude src/.internal --include src --all mocha",
+    "report": "c8 report --reporter=lcov",
+    "coveralls": "cat ./coverage/lcov.info > ./node_modules/coveralls/bin/coveralls.js",
+    "setVisualTestReport": "mocha --reporter mochawesome || true"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "c8": "^7.3.5",
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
     "mocha": "^8.2.1",
-    "mocha-lcov-reporter": "^1.3.0",
     "mochawesome": "^6.2.1"
   }
 }
