@@ -110,7 +110,7 @@ describe("capitalize.js tests", function() {
     });
      
     it("should return null", function() {
-      assert.isNull(capitalize(" "), expectedResult);
+      assert.equal(capitalize(" "), expectedResult);
 
     });
   });
