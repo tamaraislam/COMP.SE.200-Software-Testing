@@ -95,7 +95,7 @@ describe("capitalize.js tests", function() {
   describe("Should converts the first character of `string` to upper case and the remaining to lower case", function() {
     const expectedString = "Fred";
     const expectedOutput = "123aba";
-    const expectedResult = " ";
+    
 
     it("should return the first character of `string` to upper case when all characters  of `string` are upper case", function() {
       assert.equal(capitalize("FRED"), expectedString);
@@ -110,7 +110,7 @@ describe("capitalize.js tests", function() {
     });
      
     it("should return null", function() {
-      assert.equal(capitalize(" "), expectedResult);
+      expect(" ").to.eql(" ");
 
     });
   });
