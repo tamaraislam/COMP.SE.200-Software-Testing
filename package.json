@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "chai": "^4.2.0",
+    "install-npm-version": "^1.0.6",
     "mocha": "^8.2.1",
     "mochawesome": "^6.2.1"
   },
