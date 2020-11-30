@@ -10,6 +10,8 @@ import add from "../src/add.js";
 import at from "../src/at.js";
 import camelCase from "../src/camelCase.js";
 import capitalize from "../src/capitalize.js";
+import castArray from "../src/castArray.js";
+
 
 /******** 
  * 
