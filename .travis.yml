@@ -13,10 +13,9 @@ script:
 - echo 'Running coverage reporter'
 - npm run report
 
-
-
 after_script:
-- echo 'Setting up coveralls'
+- echo 'Running overalls code coverage'
 - npm run coveralls
+- rm -rf ./coverage
 
-- echo 'pipelined mocha coverage information to coveralls'
+- echo 'Pipelined mocha coverage information to coveralls'
