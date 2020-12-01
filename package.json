@@ -1,20 +1,23 @@
 {
   "name": "software-testing-assignment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Assignment",
+  "main": "",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "setTestReport": "mocha --reporter mochawesome || true"
+    "test": "c8 --include src --all --exclude src/.internal mocha",
+    "report": "c8 report --include src --all --exclude src/.internal --reporter=lcov",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "setVisualTestReport": "mocha --reporter mochawesome || true"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "c8": "^7.3.5",
     "chai": "^4.2.0",
-    "install-npm-version": "^1.0.6",
+    "coveralls": "^3.1.0",
     "mocha": "^8.2.1",
     "mochawesome": "^6.2.1"
-  },
-  "devDependencies": {}
+  }
 }

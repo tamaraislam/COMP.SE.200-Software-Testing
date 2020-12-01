@@ -1,5 +1,8 @@
 # Student template
 
+[![Build Status](https://travis-ci.org/tamaraislam/Software-Testing.svg?branch=main)](https://travis-ci.org/tamaraislam/Software-Testing)
+[![Coverage Status](https://coveralls.io/repos/github/tamaraislam/Software-Testing/badge.svg?branch=main)](https://coveralls.io/github/tamaraislam/Software-Testing?branch=main)
+
 ## Purpose of this repository
 
 This is a testing suite for the provided javascript library under /src folder.
