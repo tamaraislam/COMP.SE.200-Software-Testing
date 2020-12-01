@@ -7,20 +7,22 @@ const assert = require('chai').assert;
 
 import chunk from "../src/chunk.js";
 
-/****** 5. castArray.js tests *****/
+/****** 7. chunk.js tests *****/
 describe("chunk.js tests", function() {
-  describe("Should splits an Array into given-size chunks", function() {
+  describe("Should split an Array into given-size chunks", function() {
     it("should return a null array when given size value is less than 1", function() {
         const array = [];
-        assert.equal(array,chunk());
+        assert.deepEqual(chunk(""), array);
     });
 
     it("should return [['a', 'b'], ['c', 'd']] when test data is chunk(['a', 'b', 'c', 'd'], 2)", function() {
-      assert.equal([['a', 'b'], ['c', 'd']], chunk(['a', 'b', 'c', 'd']));
+        const ExpectedChunk = [['a', 'b'],['c', 'd']];
+      assert.deepEqual(chunk(['a', 'b', 'c', 'd']), ExpectedChunk);
     });
 
     it("should return [['a', 'b', 'c'], ['d']] when test data is  chunk(['a', 'b', 'c', 'd'], 3)", function() {
-      assert.equal([['a', 'b', 'c'], ['d']], chunk(['a', 'b', 'c', 'd']));
+        const Expected_Chunk = [['a', 'b', 'c'],['d']];
+      assert.deepEqual(chunk(['a', 'b', 'c', 'd']), Expected_Chunk);
     });
 
     });
