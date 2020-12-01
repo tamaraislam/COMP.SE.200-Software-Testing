@@ -1,21 +1,21 @@
 language: node_js
 node_js:
-- '14'
+- node
 
 install:
-- echo 'Installing dependencies'
-- npm ci
+  - echo 'Installing dependencies'
+  - npm ci
 
 script:
-- echo 'Running tests'
-- npm test
+  - echo 'Running tests'
+  - npm test
 
-- echo 'Running coverage reporter'
-- npm run report
+  - echo 'Running coverage reporter'
+  - npm run report
 
 after_script:
-- echo 'Running overalls code coverage'
-- npm run coveralls
-- rm -rf ./coverage
+  - echo 'Running overalls code coverage'
+  - npm run coveralls
+  - rm -rf ./coverage
 
-- echo 'Pipelined mocha coverage information to coveralls'
+  - echo 'Pipelined mocha coverage information to coveralls'
