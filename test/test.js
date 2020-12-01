@@ -4,11 +4,15 @@ const require = createRequire(import.meta.url);
 
 // Chai assert
 const assert = require('chai').assert;
+import { expect } from 'chai';
 
 /**** Imports for all the different javascript modules *****/
 import add from "../src/add.js";
 import at from "../src/at.js";
 import camelCase from "../src/camelCase.js";
+import capitalize from "../src/capitalize.js";
+import castArray(...args) from "../src/castArray.js";
+
 
 /******** 
  * 
@@ -87,3 +91,49 @@ describe("camelCase.js tests", function() {
     });
   });
 });
+
+
+/****** 4. capitalize.js tests *****/
+describe("capitalize.js tests", function() {
+  describe("Should converts the first character of `string` to upper case and the remaining to lower case", function() {
+    const expectedString = "Fred";
+    const expectedOutput = "123aba";
+    
+
+    it("should return the first character of `string` to upper case when all characters  of `string` are upper case", function() {
+      assert.equal(capitalize("FRED"), expectedString);
+    });
+
+    it("should return the first character of `string` to upper case when all characters  of `string` are lower case", function() {
+      assert.equal(capitalize("fred"), expectedString);
+    });
+
+    it("should return the string as it is when first characters of `string` are number and then it is lower case", function() {
+      assert.equal(capitalize("123aba"), expectedOutput);
+    });
+     
+    it("should return null", function() {
+      expect(" ").to.eql(" ");
+
+    });
+  });
+});
+
+/****** 5. castArray.js tests *****/
+describe("castArray.js tests", function() {
+  describe("Should Converts values to arrays", function() {
+
+    it("should return [1] when test data is 1", function() {
+      expect("1").to.eql([1]);
+    });
+
+    it("should return [{ 'a': 1 }] when test data is { 'a': 1 }", function() {
+      expect("{ 'a': 1 }").to.eql([{ 'a': 1 }]);
+    });
+
+    it("should return ['abc'] when test data is 'abc'", function() {
+      expect("'abc'").to.eql(['abc']);
+    });
+  });
+});
+
