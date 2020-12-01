@@ -8,7 +8,7 @@ install:
 
 script:
   - echo 'Running tests'
-  - npm run test --silent
+  - npm run test || true
 
   - echo 'Running coverage reporter'
   - npm run report
