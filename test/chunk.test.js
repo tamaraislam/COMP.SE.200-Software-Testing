@@ -12,17 +12,17 @@ describe("chunk.js tests", function() {
   describe("Should split an Array into given-size chunks", function() {
     it("should return a null array when given size value is less than 1", function() {
         const array = [];
-        assert.deepEqual(chunk(""), array);
+        assert.deepEqual(chunk(['a', 'b', 'c', 'd'],-1), array);
     });
 
     it("should return [['a', 'b'], ['c', 'd']] when test data is chunk(['a', 'b', 'c', 'd'], 2)", function() {
         const ExpectedChunk = [['a', 'b'],['c', 'd']];
-      assert.deepEqual(chunk(['a', 'b', 'c', 'd']), ExpectedChunk);
+      assert.deepEqual(chunk(['a', 'b', 'c', 'd'],2), ExpectedChunk);
     });
 
     it("should return [['a', 'b', 'c'], ['d']] when test data is  chunk(['a', 'b', 'c', 'd'], 3)", function() {
         const Expected_Chunk = [['a', 'b', 'c'],['d']];
-      assert.deepEqual(chunk(['a', 'b', 'c', 'd']), Expected_Chunk);
+      assert.deepEqual(chunk(['a', 'b', 'c', 'd'],3), Expected_Chunk);
     });
 
     });
