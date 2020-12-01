@@ -3,10 +3,3 @@ node_modules
 
 ## Generated mochawesome report
 mochawesome-report
-
-## coveralls files
-# config file 
-.coveralls.yml
-
-# code coverage reports
-coverage
