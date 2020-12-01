@@ -10,7 +10,13 @@ script:
 - echo 'Running tests'
 - npm test
 
+- echo 'Running coverage reporter'
+- npm run report
+
+
+
 after_script:
-- ./node_modules/.bin/jscoverage lib lib-cov
-- ./node_modules/.bin/mocha test/test.js -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
-- echo 'pipelined mocha lcov to coveralls'
+- echo 'Setting up coveralls'
+- npm run coveralls
+
+- echo 'pipelined mocha coverage information to coveralls'
