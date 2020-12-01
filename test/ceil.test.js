@@ -19,8 +19,8 @@ describe("ceil.js tests", function() {
       assert.equal([1.24], ceil(1.2345,2));
     });
 
-    it("should return 1300 when test data is ceil(123.456, -2)", function() {
-      assert.equal(1300, ceil(123.456,-2));
+    it("should return 200 when test data is ceil(123.456, -2)", function() {
+      assert.equal([200], ceil(123.456,-2));
     });
 
     });
