@@ -1,12 +1,14 @@
 {
   "name": "software-testing-assignment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Assignment",
+  "main": "",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "setTestReport": "mocha --reporter mochawesome || true"
+    "test": "c8 --exclude src/.internal --include src --all mocha",
+    "report": "c8 report --reporter=lcov",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "setVisualTestReport": "mocha --reporter mochawesome || true"
   },
   "author": "",
   "license": "MIT",
