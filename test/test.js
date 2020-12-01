@@ -4,7 +4,6 @@ const require = createRequire(import.meta.url);
 
 // Chai assert
 const assert = require('chai').assert;
-import { expect } from 'chai';
 
 /**** Imports for all the different javascript modules *****/
 import add from "../src/add.js";
@@ -19,20 +18,6 @@ import castArray from "../src/castArray.js";
  *  TESTS
  * 
 *********/
-
-/***** Default instructional test of mocha *****/
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-
-    it("Should return 0 when the value is present", function() {
-      assert.equal([1, 2, 3].indexOf(1), 0);
-    });
-  });
-});
-
 
 /***** 1.  add.js tests *****/
 describe("add.js tests", function() {
@@ -96,30 +81,25 @@ describe("camelCase.js tests", function() {
 /****** 4. capitalize.js tests *****/
 describe("capitalize.js tests", function() {
   describe("Should converts the first character of `string` to upper case and the remaining to lower case", function() {
-    const expectedString = "Fred";
-    const expectedOutput = "123aba";
+    const expectedFredOutput = "Fred";
+    const expectedAbaOutput = "123aba";
     
 
     it("should return the first character of `string` to upper case when all characters  of `string` are upper case", function() {
-      assert.equal(capitalize("FRED"), expectedString);
+      assert.equal(capitalize("FRED"), expectedFredOutput);
     });
 
     it("should return the first character of `string` to upper case when all characters  of `string` are lower case", function() {
-      assert.equal(capitalize("fred"), expectedString);
+      assert.equal(capitalize("fred"), expectedFredOutput);
     });
 
     it("should return the string as it is when first characters of `string` are number and then it is lower case", function() {
-      assert.equal(capitalize("123aba"), expectedOutput);
-    });
-     
-    it("should return null", function() {
-      expect(" ").to.eql(" ");
-
+      assert.equal(capitalize("123aba"), expectedAbaOutput);
     });
   });
 });
 
-/****** 5. castArray.js tests *****/
+/****** 5. castArray.js tests 
 describe("castArray.js tests", function() {
   describe("Should Converts values to arrays", function() {
 
@@ -136,4 +116,4 @@ describe("castArray.js tests", function() {
     });
   });
 });
-
+*****/
