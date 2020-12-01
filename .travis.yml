@@ -8,14 +8,16 @@ install:
 
 script:
   - echo 'Running tests'
-  - npm test
+  - npm run test || true
 
   - echo 'Running coverage reporter'
   - npm run report
 
-after_script:
   - echo 'Running overalls code coverage'
   - npm run coveralls
   - rm -rf ./coverage
 
   - echo 'Pipelined mocha coverage information to coveralls'
+
+nofications:
+  email: false
