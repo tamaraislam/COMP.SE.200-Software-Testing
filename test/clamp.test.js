@@ -19,13 +19,16 @@ const require = createRequire(
                 
                 assert.strictEqual(clamp(5, 0, 10), expectedResult);
             });
+
             it("should return max if the number is larger", function () {
                 assert.strictEqual(clamp(10, -5, 5), expectedResult);
             });
+
             it("should return min if the number is smaller", function () {
                 const expectedOutput = -5;
                 assert.strictEqual(clamp(-10, -5, 5), expectedOutput)
             });
+            
             it("should return a number ", function () {
                 assert.typeOf(clamp(), "number");
             });
