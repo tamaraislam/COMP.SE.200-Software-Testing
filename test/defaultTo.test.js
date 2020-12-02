@@ -8,7 +8,7 @@ import defaultTo from "../src/defaultTo.js";
 
 /****** 11. defaultTo.js tests *****/
 describe("defaultTo.js tests", function() {
-    describe("Should return defaultValue` value if `value` is `NaN`, `null`, or `undefined", function() {
+    describe("Should return defaultValue` value if `value` is `NaN`, `null`, or `undefined`", function() {
         
         const defaultValue = 50;
         
