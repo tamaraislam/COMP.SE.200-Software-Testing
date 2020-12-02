@@ -38,7 +38,7 @@ describe("compact.js tests", function() {
         it("should return itself when given an array", function() {
             const arr = ["hello", "world"];
             
-            assert.strictEqual(arr, compact(arr));
+            assert.deepEqual(arr, compact(arr));
         });
     });
 });
