@@ -9,7 +9,7 @@ import difference from "../src/difference.js";
 /****** 13. difference.js tests *****/
 describe("difference.js tests", function() {
     describe("Should an array with values where the second Array’s values will be excluded from the return value", function() {
-
+        
         it("should return [1, 2] when first array:[1, 2, 3, 4] & second array:[3, 4]", function() {
             const ExpectedResult = [1, 2]; 
             assert.deepEqual(difference([1, 2, 3, 4],[3, 4]),ExpectedResult);
@@ -23,8 +23,7 @@ describe("difference.js tests", function() {
         it("should return [“abba”] when first array:[“hello”, “world”, “abba”] & second array:[“hello”, “world”]", function() {
             const ExpectedOutput = ["abba"];
             assert.deepEqual(difference(["hello", "world", "abba"],["hello", "world"]),ExpectedOutput);
-        });
-        
+        });   
     });
 });
 
