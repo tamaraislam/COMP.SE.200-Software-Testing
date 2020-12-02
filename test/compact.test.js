@@ -12,8 +12,7 @@ describe("compact.js tests", function() {
     describe("Should remove all the “falsey” values from an array", function() {
         
         const expectedResult = [1, 2, 3];
-        let NaN ="123ABC";
-        
+
         it("should return array removing all NaN value", function() {
             
             assert.notStrictEqual(expectedResult, compact([NaN, 1, false, 2, '', 3]));
@@ -26,7 +25,7 @@ describe("compact.js tests", function() {
         
         it("should return array removing all falsey value", function() {
             
-            assert.notStrictEqual(expectedResult, compact(['0', 1, false, 2, '', 3]));
+            assert.notStrictEqual(expectedResult, compact([0, 1, false, 2, '', 3]));
         });
         
         it("should return array removing all falsey value", function() {
