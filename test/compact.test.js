@@ -12,32 +12,38 @@ describe("compact.js tests", function() {
     describe("Should remove all the “falsey” values from an array", function() {
         
         const expectedResult = [1, 2, 3];
-
+        
         it("should return array removing all NaN value", function() {
             
-            assert.notStrictEqual(expectedResult, compact([NaN, 1, false, 2, '', 3]));
+            assert.deepEqual(expectedResult, compact([NaN, 1, false, 2, '', 3]));
         });
         
         it("should return array removing all undefined value", function() {
             
-            assert.notStrictEqual(expectedResult, compact([undefined, 1, false, 2, '', 3]));
+            assert.deepEqual(expectedResult, compact([undefined, 1, false, 2, '', 3]));
         });
         
         it("should return array removing all falsey value", function() {
             
-            assert.notStrictEqual(expectedResult, compact([0, 1, false, 2, '', 3]));
+            assert.deepEqual(expectedResult, compact([0, 1, false, 2, '', 3]));
         });
         
         it("should return array removing all falsey value", function() {
             const output = [0, false, null, undefined," ", NaN];
             
-            assert.notStrictEqual(output, compact([]));
+            assert.deepEqual(output, compact([]));
         });
-
+        
         it("should return itself when given an array", function() {
             const arr = ["hello", "world"];
             
             assert.deepEqual(arr, compact(arr));
+        });
+        
+        it("should return itself when given an array", function() {
+            const array = [];
+            
+            assert.deepEqual(array, compact(array));
         });
     });
 });
