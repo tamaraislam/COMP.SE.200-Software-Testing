@@ -31,7 +31,7 @@ const require = createRequire(
                 assert.strictEqual(isLength("3"),false);
             });
             
-            it("Should return false if `value` is less than -1", function () {
+            it("Should return false if `value` is -1", function () {
                 assert.strictEqual(isLength(-1),false);
             });
         });
