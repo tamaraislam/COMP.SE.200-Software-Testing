@@ -15,15 +15,15 @@ const require = createRequire(
         
         describe("Should Return `true` if `value` is a boolean, else `false`", function () {
             it("should return true if `value` is `false` ", function () {
-                assert.strictEqual(isBoolean(false),true);
+                assert.isBoolean(isBoolean(false),true);
             });
             
             it("Should Return `false` if `value` is `null`", function () {
-                assert.strictEqual(isBoolean(null),false);
+                assert.isBoolean(isBoolean(null),false);
             });
             
             it("Should Return `false` if `value` is string", function () {
-                assert.strictEqual(isBoolean("true"),false);
+                assert.isBoolean(isBoolean("true"),false);
             });
         });
     });
