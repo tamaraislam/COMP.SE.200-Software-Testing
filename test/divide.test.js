@@ -28,19 +28,19 @@ const require = createRequire(
                 const expectedOutput = 0.5;
                 assert.strictEqual(divide(6,12), expectedOutput)
             });
-
+            
             it("should return 1 when 6 is divided by 6", function () {
                 const expectedOutput2 = 1;
                 assert.strictEqual(divide(6,6), expectedOutput2)
             });
-
+            
             it("should return 6 when 12 is divided by 2", function () {
                 const expectedOutput3 = 6;
                 assert.strictEqual(divide(12,2), expectedOutput3)
             });
             
             it("should return a number ", function () {
-                assert.typeOf(divide(), "number");
+                assert.isNumber(divide(), Number);
             });
         });
     });

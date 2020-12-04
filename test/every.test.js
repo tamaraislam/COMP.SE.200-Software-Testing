@@ -31,5 +31,12 @@ const require = createRequire(
                 const expectedOutput = true;
                 assert.deepEqual(every(testData3,Boolean), expectedOutput)
             });
+            
+            it("should return boolean", function () {
+                const returnValue = true,
+                returnValue2 = false;
+                assert.isBoolean(returnValue, "correct answer")
+                assert.isBoolean(returnValue2,"wrong answer")
+            });
         });
     });

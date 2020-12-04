@@ -25,6 +25,10 @@ describe("chunk.js tests", function() {
 			assert.deepEqual(chunk(['a', 'b', 'c', 'd'],3), Expected_Chunk);
 		});
 		
+		it("return value is an array ", function() {
+			assert.isArray(chunk([]), Array);
+		});
+		
 	});
 });
 

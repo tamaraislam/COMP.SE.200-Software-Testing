@@ -23,7 +23,11 @@ describe("difference.js tests", function() {
         it("should return [“abba”] when first array:[“hello”, “world”, “abba”] & second array:[“hello”, “world”]", function() {
             const ExpectedOutput = ["abba"];
             assert.deepEqual(difference(["hello", "world", "abba"],["hello", "world"]),ExpectedOutput);
-        });   
+        });
+        
+        it("should return an array", function() {
+            assert.isArray(difference(), Array);
+        });
     });
 });
 

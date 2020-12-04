@@ -34,5 +34,12 @@ const require = createRequire(
                 const expectedOutput = true;
                 assert.deepEqual(eq(NaN, NaN), expectedOutput)
             });
+
+            it("should return boolean", function () {
+                const returnValue = true,
+                returnValue2 = false;
+                assert.isBoolean(eq(returnValue), "correct answer")
+                assert.isBoolean(eq(returnValue2),"wrong answer")
+            });
         });
     });

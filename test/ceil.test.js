@@ -27,7 +27,7 @@ describe("ceil.js tests", function () {
 		});
 
 		it("should return a number ", function () {
-			assert.typeOf(ceil(), "number");
+			assert.isNumber(ceil(), Number);
 		});
 
 	});
