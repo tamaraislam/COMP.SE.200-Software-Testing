@@ -30,5 +30,12 @@ const require = createRequire(
                 const val = "abba";
                 assert.equal(isEmpty(val),false);
             });
+
+            it("should return boolean", function () {
+                const returnValue = true,
+                returnValue2 = false;
+                assert.isBoolean(returnValue, "correct answer")
+                assert.isBoolean(returnValue2,"wrong answer")
+            });
         });
     });

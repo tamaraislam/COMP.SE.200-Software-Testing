@@ -21,5 +21,12 @@ const require = createRequire(
             it("Should Return `false` if `value` is an old date", function () {
                 assert.strictEqual(isDate("Mon April 23 2012"),false);
             });
+
+            it("should return boolean", function () {
+                const returnValue = true,
+                returnValue2 = false;
+                assert.isBoolean(returnValue, "correct answer")
+                assert.isBoolean(returnValue2,"wrong answer")
+            });
         });
     });

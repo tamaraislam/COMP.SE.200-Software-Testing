@@ -20,4 +20,7 @@ describe("add.js tests", function() {
     it("should return max integer + 1", function() {
       assert.equal(Number.MAX_SAFE_INTEGER + 1, add(Number.MAX_SAFE_INTEGER, 1));
     });
+    it("return value is a number", function() {
+      assert.isNumber(add(), Number);
+    });
   });

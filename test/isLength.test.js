@@ -20,7 +20,7 @@ const require = createRequire(
             
             it("Should return true  if `value` is  Max-safe-integer ", function () {
                 const MAX_SAFE_INTEGER = 9007199254740991;
-                assert.strictEqual(isLength(MAX_SAFE_INTEGER),true);
+                assert.strictEqual(isLength(Number.MAX_SAFE_INTEGER),true);
             });
             
             it("Should return false if `value` is infinity", function () {
@@ -33,6 +33,13 @@ const require = createRequire(
             
             it("Should return false if `value` is -1", function () {
                 assert.strictEqual(isLength(-1),false);
+            });
+
+            it("should return boolean", function () {
+                const returnValue = true,
+                returnValue2 = false;
+                assert.isBoolean(returnValue, "correct answer")
+                assert.isBoolean(returnValue2,"wrong answer")
             });
         });
     });

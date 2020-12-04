@@ -35,8 +35,8 @@ const require = createRequire(
                 assert.deepEqual(drop([1, 2, 3],0), expectedOutput2)
             });
             
-            it("should return a number ", function () {
-                assert.typeOf(drop(), "array");
+            it("should return an array ", function () {
+                assert.isArray(drop([]), Array);
             });
         });
     });

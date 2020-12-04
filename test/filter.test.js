@@ -27,7 +27,7 @@ const require = createRequire(
             });
             
             it("should return an array ", function () {
-                assert.typeOf(filter(), "array");
+                assert.isArray(filter(), Array);
             });
         });
     });

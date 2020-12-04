@@ -30,5 +30,9 @@ const require = createRequire(
       it("should return the string as it is when first characters of `string` are number and then it is lower case", function () {
         assert.equal(capitalize("123aba"), expectedAbaOutput);
       });
+      
+      it("return value is a string", function() {
+        assert.isString(capitalize(""), String);
+      });
     });
   });

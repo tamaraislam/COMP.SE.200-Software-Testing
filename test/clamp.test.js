@@ -29,7 +29,7 @@ const require = createRequire(
             });
             
             it("should return a number ", function () {
-                assert.typeOf(clamp(), "number");
+                assert.isNumber(clamp(), Number);
             });
         });
     });

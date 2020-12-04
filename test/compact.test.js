@@ -45,5 +45,9 @@ describe("compact.js tests", function() {
             
             assert.deepEqual(array, compact(array));
         });
+        
+        it("should return an array", function() {
+            assert.isArray(compact([]), Array);
+        });    
     });
 });
