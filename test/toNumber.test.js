@@ -23,12 +23,20 @@ const require = createRequire(
                 assert.strictEqual(toNumber(Number.MIN_VALUE),5e-324);
             });
             
-            it("Check input is a finite number", function () {
+            it("Should Check input is a finite number", function () {
                 assert.isFinite(toNumber(9999999999),Number.Finite);
             });
             
-            it("Check input is a NaN", function () {
+            it("Should Check input is a NaN", function () {
                 assert.isNaN(toNumber(NaN),NaN);
+            });
+            
+            it("should return 3.2 when input is 3.2", function () {
+                assert.strictEqual(toNumber(3.2),3.2);
+            });
+            
+            it("should return 3.2 when input is '3.2'", function () {
+                assert.strictEqual(toNumber("3.2"), 3.2);
             });
         });
     });
