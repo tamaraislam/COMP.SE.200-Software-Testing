@@ -4,36 +4,37 @@ import {
 } from 'module';
 const require = createRequire(
     import.meta.url);
-    // Chai assert
-    const assert = require('chai').assert;
-    
-    import endsWith from "../src/endsWith.js";
-    
-    /****** 16.endsWith.js tests *****/
-    
-    describe("endsWith.js tests", function () {
-        const array = "abc";
-        describe("Should return a boolean describing, if a given string ends with another given string", function () {
-            it("should return true when endsWith('abc', 'c') ", function () {
-                const expectedResult = true;
-                assert.deepEqual(endsWith("abc", "c"), expectedResult);
-            });
-            
-            it("should return false when endsWith('abc', 'b')", function () {
-                const ExpectedResult = false;
-                assert.deepEqual(endsWith("abc", "b"), ExpectedResult);
-            });
-            
-            it("should return true when endsWith('abc', 'b', 2)", function () {
-                const expectedOutput = true;
-                assert.deepEqual(endsWith("abc", "b", 2), expectedOutput)
-            });
-            
-            it("should return boolean", function () {
-                const returnValue = true,
-                returnValue2 = false;
-                assert.isBoolean(returnValue, "correct answer")
-                assert.isBoolean(returnValue2,"wrong answer")
-            });
+// Chai assert
+const assert = require('chai').assert;
+
+import endsWith from "../src/endsWith.js";
+
+/****** 16.endsWith.js tests *****/
+
+describe("endsWith.js tests", function () {
+    describe("Should return a boolean describing, if a given string ends with another given string", function () {
+        it("should return true when endsWith('abc', 'c') ", function () {
+            assert.deepEqual(endsWith("abc", "c"), true);
+        });
+        
+        it("should return false when endsWith('abc', 'b')", function () {
+            assert.deepEqual(endsWith("abc", "b"), false);
+        });
+        
+        it("should return true when endsWith('abc', 'b', 2)", function () {
+            assert.deepEqual(endsWith("abc", "b", 2), true);
+        });
+
+        it("should return true when given negative position to look for and target is last string", function () {
+            assert.deepEqual(endsWith("abc", "c", -99), true);
+        });
+
+        it("should return true when given position > string.length to look for and target is last string", function () {
+            assert.deepEqual(endsWith("abc", "c", 100), true);
+        });
+        
+        it("should return boolean", function () {
+            assert.isBoolean(endWith());
         });
     });
+});
