@@ -29,5 +29,24 @@ describe("clamp.js tests", function () {
         it("should return a number ", function () {
             assert.isNumber(clamp(1, 2, 3));
         });
+        
+        it("should return a finite number ", function () {
+            const expectedNumber = 2;
+            assert.isFinite(clamp(2,NaN,2),expectedNumber)
+        });
+        
+        it("Input is above the lower bound", function () {
+            const upperBound= 5;
+            const input = 10;
+            const lowerBound = -5;
+            assert.isAbove(clamp(input,lowerBound,upperBound),lowerBound)
+        });
+        
+        it("Input is below the upper bound", function () {
+            const UpperBound= 5;
+            const Input = -10;
+            const LowerBound = -5;
+            assert.isBelow(clamp(Input,LowerBound,UpperBound),UpperBound)
+        });
     });
 });
