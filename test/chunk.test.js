@@ -24,11 +24,17 @@ describe("chunk.js tests", function() {
 			const Expected_Chunk = [['a', 'b', 'c'],['d']];
 			assert.deepEqual(chunk(['a', 'b', 'c', 'd'],3), Expected_Chunk);
 		});
-		
-		it("return value is an array ", function() {
-			assert.isArray(chunk([]), Array);
+
+		it("Should return empty array from null", function() {
+			const returnVal = chunk(null);
+
+			assert.isArray(returnVal);
+			assert.isEmpty(returnVal);
 		});
 		
+		it("return value is an array ", function() {
+			assert.isArray(chunk([]));
+		});
 	});
 });
 

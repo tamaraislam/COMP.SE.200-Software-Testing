@@ -27,11 +27,13 @@ Run ``npm install`` to install all the dependencies
 
 Optionally, run ``npm test`` in your console if you want to manually run the tests
 
-Run ``npm run setTestReport`` in your console to generate the test report
+Optionally, run ``npm run setTestReport`` in your console to generate the test report
 
-You can find the generated report at ./mochawesome-report . Open either the HTML version in your browser or the .json version as you wish
+You can find the generated report at ./mochawesome-report . Open either the HTML version in your browser or the .json version as you wish.
 
-TODO: Pipeline, coveralls, aws, write all the test cases
+You can find the travis pipeline report and the coveralls code coverage report from the badges above.
+
+TODO: aws, write all the test cases
 
 # Legal
 
