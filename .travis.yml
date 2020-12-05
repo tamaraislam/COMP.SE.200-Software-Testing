@@ -8,10 +8,20 @@ install:
 script:
   - npm run test || true
 
-  - npm run report
+  - npm run report:lcov
 
   - npm run coveralls
   - rm -rf ./coverage
+
+  - npm run report:visual
+
+deploy:
+  provider: s3
+  access_key_id: "AKIAXGGMT6VG32NSM7OG"
+  secret_access_key: "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"
+  bucket: "S3 Bucket"
+  acl: public_read
+  local_dir: mochawesome-report
 
 notifications:
   email: false
