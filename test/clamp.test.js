@@ -13,7 +13,7 @@ import clamp from "../src/clamp.js";
 describe("clamp.js tests", function () {
     const expectedResult = 5;
     describe("Should clamp `number` within the inclusive `lower` and `upper` bounds", function () {
-        it("should return the number", function () {
+        it("should return the number if inclusive in range", function () {
             assert.strictEqual(clamp(5, 0, 10), expectedResult);
         });
         
