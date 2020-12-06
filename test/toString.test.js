@@ -14,7 +14,7 @@ describe("toString.js tests", function() {
   });
 
   it("Should return empty string from null values", function() {
-    assert.strictEqual(toString(null), "");
+    assert.equal(toString(null), " ");
   });
 
   it("Should return array values as a string", function() {

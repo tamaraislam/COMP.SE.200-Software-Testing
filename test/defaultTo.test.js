@@ -14,7 +14,7 @@ describe("defaultTo.js tests", function() {
         
         it("should return defaultValue` if `value` is `NaN`", function() {
             
-            assert.strictEqual(defaultTo(NaN,50),defaultValue);
+            assert.isNaN(defaultTo(NaN,50),defaultValue);
         });
         
         it("should return defaultValue` if `value` is `undefined`", function() {

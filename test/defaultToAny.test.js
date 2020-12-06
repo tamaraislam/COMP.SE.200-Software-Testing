@@ -27,7 +27,7 @@ describe("defaultToAny.js tests", function() {
         
         it("should return second default value if first `value` is `NaN`, `null` or `undefined", function() {
             const value = NaN;
-            assert.strictEqual(defaultToAny(undefined, null, NaN),value);
+            assert.isNaN(defaultToAny(undefined, null, NaN),value);
         });
         
     });
