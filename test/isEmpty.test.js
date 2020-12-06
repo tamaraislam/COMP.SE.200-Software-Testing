@@ -52,8 +52,7 @@ describe("isEmpty.js tests", function () {
         });
 
         it("should return boolean", function () {
-            assert.isBoolean(isEmpty("abba"));
-            assert.isBoolean(isEmpty(""));
+            assert.isBoolean(isEmpty());
         });
 
         it("Should return true, if given empty prototype object", function() {

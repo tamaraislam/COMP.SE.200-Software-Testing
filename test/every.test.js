@@ -33,10 +33,7 @@ const require = createRequire(
             });
             
             it("should return boolean", function () {
-                const returnValue = true,
-                returnValue2 = false;
-                assert.isBoolean(returnValue, "correct answer")
-                assert.isBoolean(returnValue2,"wrong answer")
+                assert.isBoolean(every());    
             });
         });
     });
