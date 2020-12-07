@@ -24,7 +24,7 @@ const require = createRequire(
             });
             
             it("should return false when eq('a', Object('a'))", function () {
-                assert.deepEqual(eq('a', Object('a')), false)
+                assert.isFalse(eq('a', Object('a')));
             });
             
             it("Should return false when comparing to different object", function() {
