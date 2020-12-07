@@ -1,17 +1,25 @@
 language: node_js
 node_js:
 - node
-
 install:
-  - npm ci
-
+- npm ci
 script:
-  - npm run test || true
-
-  - npm run report
-
-  - npm run coveralls
-  - rm -rf ./coverage
-
+- npm run test || true
+- npm run report:lcov
+- npm run coveralls
+- rm -rf ./coverage 
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: testing-course-bucket
+  skip_cleanup: true
+  acl: public_read
+  local_dir: mochawesome-report
+  upload-dir: report
+  default_text_charset: "utf-8"
+  cache_control: "max-age=21600"
+  on:
+    branch: main
 notifications:
-  email: false
+  email: false  

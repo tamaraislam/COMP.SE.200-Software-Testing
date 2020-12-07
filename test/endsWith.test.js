@@ -25,16 +25,16 @@ describe("endsWith.js tests", function () {
             assert.deepEqual(endsWith("abc", "b", 2), true);
         });
 
-        it("should return true when given negative position to look for and target is last string", function () {
-            assert.deepEqual(endsWith("abc", "c", -99), true);
+        it("should return true when given negative position to look for and target is first char", function () {
+            assert.deepEqual(endsWith("abc", "a", -99), true);
         });
 
-        it("should return true when given position > string.length to look for and target is last string", function () {
+        it("should return true when given position > string.length to look for and target is last char", function () {
             assert.deepEqual(endsWith("abc", "c", 100), true);
         });
         
         it("should return boolean", function () {
-            assert.isBoolean(endWith());
+            assert.isBoolean(endsWith());
         });
     });
 });

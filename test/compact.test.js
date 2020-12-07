@@ -15,39 +15,37 @@ describe("compact.js tests", function() {
         
         it("should return array removing all NaN value", function() {
             
-            assert.deepEqual(expectedResult, compact([NaN, 1, false, 2, '', 3]));
+            assert.deepEqual(compact([NaN, 1, false, 2, '', 3]), expectedResult);
         });
         
         it("should return array removing all undefined value", function() {
             
-            assert.deepEqual(expectedResult, compact([undefined, 1, false, 2, '', 3]));
+            assert.deepEqual(compact([undefined, 1, false, 2, '', 3]), expectedResult);
         });
         
         it("should return array removing all falsey value", function() {
             
-            assert.deepEqual(expectedResult, compact([0, 1, false, 2, '', 3]));
+            assert.deepEqual(compact([0, 1, false, 2, '', 3]), expectedResult);
         });
         
         it("should return array removing all falsey value", function() {
-            const output = [0, false, null, undefined," ", NaN];
-            
-            assert.deepEqual(output, compact([]));
+            assert.deepEqual(compact([0, false, null, undefined," ", NaN]), []);
         });
         
-        it("should return itself when given an array", function() {
+        it("should return itself when given a correct array", function() {
             const arr = ["hello", "world"];
             
             assert.deepEqual(arr, compact(arr));
         });
         
-        it("should return itself when given an array", function() {
+        it("should return itself when given a correct array", function() {
             const array = [];
             
             assert.deepEqual(array, compact(array));
         });
         
         it("should return an array", function() {
-            assert.isArray(compact([]), Array);
+            assert.isArray(compact([]));
         });    
     });
 });

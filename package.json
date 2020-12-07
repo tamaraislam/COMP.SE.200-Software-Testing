@@ -5,10 +5,9 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "test": "c8 --include src --all --exclude src/.internal mocha",
-    "report": "c8 report --include src --all --exclude src/.internal --reporter=lcov",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "setVisualTestReport": "mocha --reporter mochawesome || true"
+    "test": "c8 --include src --exclude src/.internal mocha  --reporter mochawesome",
+    "report:lcov": "c8 report --include src --exclude src/.internal --reporter=lcov",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "author": "",
   "license": "MIT",
