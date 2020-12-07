@@ -15,31 +15,28 @@ const require = createRequire(
         
         describe("Should return `true` if `value` is a valid length, else `false`", function () {
             it("should return true if `value` is 3", function () {
-                assert.strictEqual(isLength(3),true);
+                assert.isTrue(isLength(3));
             });
             
             it("Should return true  if `value` is  Max-safe-integer ", function () {
-                const MAX_SAFE_INTEGER = 9007199254740991;
-                assert.strictEqual(isLength(Number.MAX_SAFE_INTEGER),true);
+                assert.isTrue(isLength(Number.MAX_SAFE_INTEGER));
             });
             
             it("Should return false if `value` is infinity", function () {
-                assert.strictEqual(isLength(Infinity),false);
+                assert.isFalse(isLength(Number.POSITIVE_INFINITY));
             });
             
             it("Should return false if `value` is '3'", function () {
-                assert.strictEqual(isLength("3"),false);
+                assert.isFalse(isLength("3"));
             });
             
             it("Should return false if `value` is -1", function () {
-                assert.strictEqual(isLength(-1),false);
+                assert.isFalse(isLength(-1));
             });
 
             it("should return boolean", function () {
-                const returnValue = true,
-                returnValue2 = false;
-                assert.isBoolean(returnValue, "correct answer")
-                assert.isBoolean(returnValue2,"wrong answer")
+                assert.isBoolean(isLength(-1)); 
+                assert.isBoolean(isLength());
             });
         });
     });

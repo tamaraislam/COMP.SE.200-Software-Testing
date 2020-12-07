@@ -13,7 +13,6 @@ describe("defaultTo.js tests", function() {
         const defaultValue = 50;
         
         it("should return defaultValue` if `value` is `NaN`", function() {
-            
             assert.strictEqual(defaultTo(Number.NaN, defaultValue),defaultValue);
         });
         
