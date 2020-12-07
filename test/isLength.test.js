@@ -35,6 +35,7 @@ const require = createRequire(
             });
 
             it("should return boolean", function () {
+                assert.isBoolean(isLength(-1)); 
                 assert.isBoolean(isLength());
             });
         });
