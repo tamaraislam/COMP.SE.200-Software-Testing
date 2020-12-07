@@ -20,6 +20,6 @@ deploy:
   default_text_charset: "utf-8"
   cache_control: "max-age=21600"
   on:
-    branch: s3-aws
+    branch: main
 notifications:
   email: false  
