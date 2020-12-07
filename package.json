@@ -7,7 +7,7 @@
   "scripts": {
     "test": "c8 --include src --exclude src/.internal mocha",
     "report:lcov": "c8 report --include src --exclude src/.internal --reporter=lcov",
-    "report:visual": "mocha --reporter mochawesome || true",
+    "report:visual": "mocha --reporter mochawesome > /dev/null || true",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "author": "",
