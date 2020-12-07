@@ -12,6 +12,7 @@ deploy:
   provider: s3
   access_key_id: AKIARGOXIGMNCG36TJ7Q
   bucket: testing-course-bucket
+  skip_cleanup: true
   acl: public_read
   local_dir: mochawesome-report
   on:
