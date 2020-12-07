@@ -17,17 +17,20 @@ describe("defaultTo.js tests", function() {
         });
         
         it("should return defaultValue` if `value` is `undefined`", function() {
-            
             assert.strictEqual(defaultTo(undefined, defaultValue),defaultValue);
         });
         
         it("should return defaultValue` if `value` is `null`", function() {
-            
             assert.strictEqual(defaultTo(null, defaultValue),defaultValue);
         });
         
         it("should return Value` if `value` is not `NaN`, `null`, or `undefined", function() {
             const value = 1;
+            assert.strictEqual(defaultTo(value, defaultValue), value);
+        });
+
+        it("should return Value` if `value` is not `NaN`, `null`, or `undefined", function() {
+            const value = "abba";
             assert.strictEqual(defaultTo(value, defaultValue), value);
         });
     });
