@@ -1,17 +1,21 @@
 language: node_js
 node_js:
 - node
-
 install:
-  - npm ci
-
+- npm ci
 script:
-  - npm run test || true
-
-  - npm run report
-
-  - npm run coveralls
-  - rm -rf ./coverage
-
+- npm run test || true
+- npm run report:lcov
+- npm run coveralls
+- rm -rf ./coverage
+- npm run report:visual
+deploy:
+  provider: s3
+  access_key_id: AKIARGOXIGMNCG36TJ7Q
+  bucket: testing-course-bucket
+  acl: public_read
+  local_dir: mochawesome-report
 notifications:
   email: false
+dd:
+  secure: Fnj6nhFO9Or2pwRHsC17nbbRWQVeWHj/yGVXFUQxnYXBnOESB4dzIova3JuOTiRLTna4N4xfykOm4G0oWEQZhtQtnSrTp+ClFMrxsL+a7QbmF2NDw8B+OwSV1eds/1noxumiMB50yVD9Exfxj2plnlnNT6/ojedze//LmE6ehoQgTDicJmpdKZTSJQx0m18M76YJMqZkaVwDRJpcXhUWhT4jYc9hgpXdZgGAkWREQGVAxjf2WsQ4XEVq9Adqo8QCGmZcrZddKeg5GdhKYoeyMgJNA71xiAo+nBPgwWHFejkbY9V9OXPbkIooKiLtAkVDXpseL/mqJqJT2CFaxoctm+G+ecp1kNrg2mGcrhION19wNHiEj4fWvuoynaXpjIt9a1s+rZCaG2zY3Mh9ImLHiiFKvN+LNxzk4y2dyWGW25ILFD7BCfVrDzmFPkVpH+YX2dYfGGePfVJdyPs+lUpuzwp7yOW6jt43ZFZrhaHpL+nx61/hH2hcLSjXQl5I0EedqJdlGuhSV+rw7tVWeX6pcYV3dqYMX3PHKFZt8AgyZlQxUulNSW9/d7TWqbLvcSI0nfsPYiTYj7+WROXUnhmfK3wVEaUc0T1v4VT8+SAPIMIHUj2l6YSeuSeIYMrUJx/GAmvcoHCFHIvW3Q7PKWfxHNnp2hYsd4XKxo34jEL1lX0=
