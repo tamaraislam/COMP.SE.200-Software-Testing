@@ -23,11 +23,15 @@ To run this project, you need Node.js version >=14 (not tested with lower versio
 
 Run ``npm install`` to install all the dependencies
 
-## Running
+## Running locally
 
-Run ``npm test`` in your console to manually run the tests. It will generate a html test report to ./``mochawesome-report`` Open either the HTML version in your browser or the .json version as you wish.
+Run ``npm test`` in your console to manually run the tests. It will log the tests in your console and generate a html test report to ``./mochawesome-report`` Open either the HTML version in your browser or the .json version as you wish.
 
 You can find the travis pipeline report and the coveralls code coverage report from the badges above.
+
+# S3 report
+
+Find the s3 report of the project at ``https://testing-course-bucket.s3.amazonaws.com/report/mochawesome.html``
 
 # Legal
 
