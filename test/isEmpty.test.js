@@ -56,7 +56,8 @@ describe("isEmpty.js tests", function () {
         });
 
         it("should return boolean", function () {
-            assert.isBoolean(isEmpty());
+            assert.isBoolean(isEmpty("abba"));
+            assert.isBoolean(isEmpty(""));
         });
     });
 });
