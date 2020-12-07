@@ -16,27 +16,28 @@ const require = createRequire(
         const other = { 'a': 1 };
         describe("Should return a boolean describing, if two given values are equivalent", function () {
             it("should return true when eq(object, object)", function () {
-                const expectedResult = true;
-                assert.deepEqual(eq(object, object), expectedResult);
+                assert.isTrue(eq(object, object));
             });
             
             it("should return true when  eq('abba', 'abba')", function () {
-                const ExpectedResult = true;
-                assert.deepEqual(eq("abba", "abba"), ExpectedResult);
+                assert.isTrue(eq("abba", "abba"));
             });
             
             it("should return false when eq('a', Object('a'))", function () {
-                const expectedOutput = true;
-                assert.deepEqual(eq('a', Object('a')), expectedOutput)
+                assert.deepEqual(eq('a', Object('a')), false)
             });
             
+            it("Should return false when comparing to different object", function() {
+                assert.isFalse(eq(object, other));
+            });
+                
             it("should return true when eq(NaN, NaN)", function () {
-                const expectedOutput = true;
-                assert.deepEqual(eq(NaN, NaN), expectedOutput)
+                assert.isTrue(eq(Number.NaN, Number.NaN));
             });
 
             it("should return boolean", function () {
-                assert.isBoolean(eq());    
+                assert.isBoolean(eq("abba", "abba")); 
+                assert.isBoolean(eq());
             });
         });
     });
