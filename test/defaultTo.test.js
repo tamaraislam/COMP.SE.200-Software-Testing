@@ -14,24 +14,23 @@ describe("defaultTo.js tests", function() {
         
         it("should return defaultValue` if `value` is `NaN`", function() {
             
-            assert.strictEqual(defaultTo(NaN,50),defaultValue);
+            assert.strictEqual(defaultTo(Number.NaN, defaultValue),defaultValue);
         });
         
         it("should return defaultValue` if `value` is `undefined`", function() {
             
-            assert.strictEqual(defaultTo(undefined,50),defaultValue);
+            assert.strictEqual(defaultTo(undefined, defaultValue),defaultValue);
         });
         
         it("should return defaultValue` if `value` is `null`", function() {
             
-            assert.strictEqual(defaultTo(null,50),defaultValue);
+            assert.strictEqual(defaultTo(null, defaultValue),defaultValue);
         });
         
         it("should return Value` if `value` is not `NaN`, `null`, or `undefined", function() {
             const value = 1;
-            assert.strictEqual(defaultTo(value,50),value);
+            assert.strictEqual(defaultTo(value, defaultValue), value);
         });
-        
     });
 });
 
