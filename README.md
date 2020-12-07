@@ -11,7 +11,7 @@ This is a testing suite for the provided javascript library under /src folder.
 
 **Group:** sleepyheads
 
-**Members:** Miikka Mänttäri, Tamara Meghla Islam
+**Members:** Miikka Mänttäri, Tamara Islam Meghla
 
 # How to run
 
@@ -25,15 +25,9 @@ Run ``npm install`` to install all the dependencies
 
 ## Running
 
-Optionally, run ``npm test`` in your console if you want to manually run the tests
-
-Optionally, run ``npm run setTestReport`` in your console to generate the test report
-
-You can find the generated report at ./mochawesome-report . Open either the HTML version in your browser or the .json version as you wish.
+Run ``npm test`` in your console to manually run the tests. It will generate a html test report to ./``mochawesome-report`` Open either the HTML version in your browser or the .json version as you wish.
 
 You can find the travis pipeline report and the coveralls code coverage report from the badges above.
-
-TODO: aws, write all the test cases
 
 # Legal
 
