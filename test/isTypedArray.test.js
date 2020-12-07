@@ -34,5 +34,17 @@ describe("isTypedArray.js tests", function() {
     it("Uint8array", function() {
       assert.isTrue(isTypedArray(new Uint8Array()));
     });
+    it("BigUIntArray with values", function() {
+      let arr = BigUint64Array();
+      arr[0] = 0;
+      arr[1] = 2;
+      arr[2] = Number.MAX_SAFE_INTEGER;
+
+      assert.isTrue(isTypedArray(arr));
+    });
+
+    it("Float32Array", function() {
+      assert.isTrue(isTypedArray(new Float32Array()));
+    });
   });
 });

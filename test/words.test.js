@@ -29,7 +29,7 @@ describe("words.js tests", function() {
   it("Should return words and desired RegExp pattern of the string in an array", function() {
     const s = "I like & love turtles !";
     const desiredArr = ["I", "like", "&", "love", "turtles"];
-    const regExp = new regExp(/&/);
+    const regExp = new RegExp(/&/);
 
     const returnVal = words(s, regExp);
 

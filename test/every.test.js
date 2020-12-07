@@ -21,16 +21,16 @@ const require = createRequire(
             
             it("should return true when  every([true, false, false],Boolean)", function () {
                 const testData2 = [true, false, false];
-                assert.isTrue(every(testData2,Boolean));
+                assert.isTrue(every(testData2, Boolean));
             });
             
             it("should return false when every([true, 1],Boolean)", function () {
-                const testData3 = [true, 1];
-                assert.isFalse(every(testData3,Boolean))
+                const testData3 = [true, 0, 1];
+                assert.isFalse(every(testData3, Boolean));
             });
             
             it("should return boolean", function () {
-                assert.isBoolean(every([]));
+                assert.isBoolean(every([], Number));
             });
         });
     });

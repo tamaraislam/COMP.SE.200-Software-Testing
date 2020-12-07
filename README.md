@@ -17,7 +17,7 @@ This is a testing suite for the provided javascript library under /src folder.
 
 ## Dependencies
 
-To run this project, you need Node.js version >=14 (not tested with lower versions) and npm.
+To run this project, you need Node.js version >=14 (not tested with lower versions) and npm. Linux environment preferred.
 
 ## Installation
 
