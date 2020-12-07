@@ -8,7 +8,6 @@ script:
 - npm run report:lcov
 - npm run coveralls
 - rm -rf ./coverage
-- npm run report:visual
 deploy:
   provider: s3
   access_key_id: AKIARGOXIGMNCG36TJ7Q
