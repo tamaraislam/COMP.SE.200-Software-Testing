@@ -9,17 +9,21 @@ import memoize from "../src/memoize.js";
 
 // TODO: Make the tests more comprehensive
 describe("memoize.js tests", function() {
+  const obj = { 'a': 1, 'b': 2 };
+
   it("Should memoize the given object values", function() {
-    let obj = { 'a': 1, 'b': 2 }
+    const mem = memoize(value => value);
 
-    const mem = memoize;
-
-    let memoizedObj = mem(obj);
+    const memoizedObj = mem(obj);
 
     assert.deepEqual(obj, memoizedObj);
 
     obj.a = 3;
-    let memoizedObjNew = mem(obj);
+    const memoizedObjNew = mem(obj);
     assert.deepEqual(memoizedObj, memoizedObjNew);
+  });
+
+  it("Should throw a TypeError when not given a function", function() {
+    assert.throws(memoize(obj), TypeError);
   });
 });

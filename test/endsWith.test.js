@@ -33,7 +33,7 @@ describe("endsWith.js tests", function () {
             assert.deepEqual(endsWith("abc", "c", 100), true);
         });
         
-        it("should return boolean", function () {
+        it("should return a boolean even with no params", function () {
             assert.isBoolean(endsWith());
         });
     });

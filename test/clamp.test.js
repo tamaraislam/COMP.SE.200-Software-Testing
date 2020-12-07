@@ -35,18 +35,18 @@ describe("clamp.js tests", function () {
             assert.isFinite(clamp(2,NaN,2),expectedNumber)
         });
         
-        it("Input is above the lower bound", function () {
-            const upperBound= 5;
+        it("Input is above the upper bound, return upper bound", function () {
+            const upperBound = 5;
             const input = 10;
             const lowerBound = -5;
-            assert.isAbove(clamp(input,lowerBound,upperBound),lowerBound)
+            assert.strictEqual(clamp(input,lowerBound,upperBound), 5);
         });
         
-        it("Input is below the upper bound", function () {
+        it("Input is below the lower bound, return lower bound", function () {
             const UpperBound= 5;
             const Input = -10;
             const LowerBound = -5;
-            assert.isBelow(clamp(Input,LowerBound,UpperBound),UpperBound)
+            assert.strictEqual(clamp(Input,LowerBound,UpperBound), -5);
         });
     });
 });

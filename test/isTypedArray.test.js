@@ -35,10 +35,10 @@ describe("isTypedArray.js tests", function() {
       assert.isTrue(isTypedArray(new Uint8Array()));
     });
     it("BigUIntArray with values", function() {
-      let arr = BigUint64Array();
-      arr[0] = 0;
-      arr[1] = 2;
-      arr[2] = Number.MAX_SAFE_INTEGER;
+      let arr = new BigUint64Array();
+      arr[0] = BigInt(0);
+      arr[1] = BigInt(2);
+      arr[2] = BigInt(Number.MAX_SAFE_INTEGER);
 
       assert.isTrue(isTypedArray(arr));
     });

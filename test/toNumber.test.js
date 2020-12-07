@@ -12,8 +12,6 @@ import toNumber from "../src/toNumber.js";
 /****** 39.toNumber *****/
 
 describe("toNumber.js tests", function () {
-    const expectedResult = 3;
-    
     describe("Should return integer", function () {
         it("Input is a number", function () {
             assert.isNumber(toNumber(3));

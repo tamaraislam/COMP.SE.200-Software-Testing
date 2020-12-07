@@ -17,10 +17,6 @@ describe("isDate.js tests", function () {
         it("should return true if `value` is new Date ", function () {
             assert.isTrue(isDate(new Date()));
         });
-
-        it("should return true if `value` is Date.now() ", function () {
-            assert.isTrue(isDate(Date.now()));
-        });
         
         it("Should Return `false` if `value` is a string", function () {
             assert.isFalse(isDate("Mon April 23 2012"));
