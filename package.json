@@ -5,8 +5,8 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "test": "c8 --include src --all --exclude src/.internal mocha",
-    "report:lcov": "c8 report --include src --all --exclude src/.internal --reporter=lcov",
+    "test": "c8 --include src --exclude src/.internal mocha",
+    "report:lcov": "c8 report --include src --exclude src/.internal --reporter=lcov",
     "report:visual": "mocha --reporter mochawesome || true",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
