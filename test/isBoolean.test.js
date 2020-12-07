@@ -15,19 +15,36 @@ const require = createRequire(
         
         describe("Should Return `true` if `value` is a boolean, else `false`", function () {
             it("should return true if `value` is `false` ", function () {
-                assert.isBoolean(isBoolean(false),true);
+                assert.isTrue(isBoolean(false));
+            });
+            
+            it("should return true if value is true ", function () {
+                assert.isTrue(isBoolean(true));
             });
             
             it("Should Return `false` if `value` is `null`", function () {
-                assert.isBoolean(isBoolean(null),false);
+                assert.isFalse(isBoolean(null));
+            });
+            
+            it("Should Return `false` if `value` is `undefined`", function () {
+                assert.isFalse(isBoolean(undefined));
+            });
+            
+            it("Should Return false if `value` is object", function () {
+                assert.isFalse(isBoolean({}));
             });
             
             it("Should Return `false` if `value` is string", function () {
-                assert.isBoolean(isBoolean("true"),false);
+                assert.isFalse(isBoolean("true"));
+            });
+            
+            it("Should Return `false` if `value` is number", function () {
+                assert.isFalse(isBoolean(0));
             });
 
             it("should return boolean", function () {
-                assert.isBoolean(isBoolean());    
+                assert.isBoolean(isBoolean("true"));
+                assert.isBoolean(isBoolean(false));
             });
         });
     });
