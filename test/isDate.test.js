@@ -23,7 +23,8 @@ const require = createRequire(
             });
 
             it("should return boolean", function () {
-                assert.isBoolean(isDate());    
+                assert.isBoolean(isDate(new Date());
+                assert.isBoolean(isDate(undefined); 
             });
         });
     });
