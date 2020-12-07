@@ -12,7 +12,6 @@ import isEmpty from "../src/isEmpty.js";
 /****** 26.isEmpty.js tests *****/
 
 describe("isEmpty.js tests", function () {
-    
     describe("Should return `true` if `value` is empty, else `false`", function () {
         it("should return true if `value` is an empty array", function () {
             assert.isTrue(isEmpty([]));
@@ -38,8 +37,13 @@ describe("isEmpty.js tests", function () {
             assert.isTrue(isEmpty({}));
         });
 
+        it("Should return true, if given empty prototype object", function() {
+            const func = function() {};
+            assert.isTrue(isEmpty(func));
+        });
+
         it("Should return false  if `value` is not an empty object", function () {
-            assert.isTrue(isEmpty({"abba": "kabba"}));
+            assert.isFalse(isEmpty({"abba": "kabba"}));
         });
 
         it("Should return false if string is not empty", function () {
@@ -53,10 +57,6 @@ describe("isEmpty.js tests", function () {
 
         it("should return boolean", function () {
             assert.isBoolean(isEmpty());
-        });
-
-        it("Should return true, if given empty prototype object", function() {
-            assert.isTrue(isEmpty(function() {}));
         });
     });
 });

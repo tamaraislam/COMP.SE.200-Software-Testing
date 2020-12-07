@@ -12,7 +12,7 @@ describe("memoize.js tests", function() {
   it("Should memoize the given object values", function() {
     let obj = { 'a': 1, 'b': 2 }
 
-    const mem = memoize(val);
+    const mem = memoize;
 
     let memoizedObj = mem(obj);
 
