@@ -43,8 +43,16 @@ describe("toNumber.js tests", function () {
             assert.strictEqual(toNumber(0), 0);
         });
 
+        it("Should return array number", function() {
+            assert.strictEqual(toNumber([2]), 2);
+        });
+
         it("Should return NaN when input is a Symbol", function() {
             assert.isNaN(toNumber(Symbol("abba")));
+        });
+
+        it("Should return NaN when input is an empty function", function() {
+            assert.isNaN(toNumber(new function() {}));
         });
 
         it("Should return NaN when the input is an object with no numbers", function() {
